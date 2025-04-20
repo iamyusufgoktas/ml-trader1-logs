@@ -38,3 +38,16 @@ STATISTICS SUMMARY :bar_chart:
 
 P&L: 0.03%, Duration: 59 seconds
 
+[15:19:03.499] ENTRY TRADE: BTCUSDT
+:bar_chart: ENTRY TRADE: BTCUSDT :bar_chart:
+• Date: 2025-04-20 15:19:01
+• Action: BUY
+• Price: $84,437.74
+• Quantity: 0.00012000
+• Total Value: $10.13
+
+PREDICTION DETAILS
+• Direction Probability: 0.8629
+• Magnitude Class: 5
+• Magnitude Probability: 0.5282
+
