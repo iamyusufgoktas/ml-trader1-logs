@@ -1,2 +1,0 @@
-trade_id,entry_time,exit_time,entry_price,exit_price,quantity,entry_total,exit_total,profit_pct,profit_usdt,direction_prob,magnitude_class,magnitude_prob,trade_result,trade_duration
-41658058920,"2025-04-20T16:33:01.102253+00:00","2025-04-20T16:34:00.882617+00:00",84502.79,84500.0,0.00012,10.1403348,10.14,-0.003301666134329526,-0.0003347999999991913,0.8866228461265564,5,0.5249626040458679,"Loss","59 seconds"
