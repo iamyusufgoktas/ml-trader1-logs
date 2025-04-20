@@ -1,2 +1,1 @@
 timestamp,action,price,quantity,usdt_amount,trade_id,direction_prob,magnitude_class,magnitude_prob
-"2025-04-20T15:17:01.138064+00:00","ENTRY",84455.02,0.00012,10.76,41656233807,0.8820760250091553,5,0.5475762486457825
