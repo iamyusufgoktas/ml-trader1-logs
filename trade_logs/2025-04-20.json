@@ -9,5 +9,18 @@
     "direction_prob": 0.8626492023468018,
     "magnitude_class": 5,
     "magnitude_prob": 0.5124395489692688
+  },
+  {
+    "timestamp": "2025-04-20T15:01:00.722037+00:00",
+    "action": "EXIT",
+    "price": 84623.52,
+    "quantity": 0.00012,
+    "usdt_amount": 10.1548224,
+    "profit_pct": -0.0031196027327713063,
+    "signal_type": "SELL",
+    "trade_id": 41655832010,
+    "direction_prob": 0.4655739367008209,
+    "magnitude_class": 4,
+    "magnitude_prob": 0.5077658891677856
   }
 ]
