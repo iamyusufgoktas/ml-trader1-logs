@@ -1,0 +1,13 @@
+[
+  {
+    "timestamp": "2025-04-20T14:59:01.064327+00:00",
+    "action": "ENTRY",
+    "price": 84626.16,
+    "quantity": 0.00012,
+    "usdt_amount": 10.76,
+    "trade_id": 41655799116,
+    "direction_prob": 0.8626492023468018,
+    "magnitude_class": 5,
+    "magnitude_prob": 0.5124395489692688
+  }
+]
