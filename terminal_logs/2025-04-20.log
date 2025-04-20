@@ -82,3 +82,5 @@ P&L: -0.00%, Duration: 2 minutes
 
 [15:30:49.007] [⚙️] Configuration: BTCUSDT | 1m
 
+[15:30:50.627] [🤖] Models loaded - Direction: DirectionTransformer | Magnitude: MagnitudeTransformer
+
