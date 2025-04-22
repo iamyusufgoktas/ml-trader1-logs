@@ -1,0 +1,22 @@
+[06:37:43.770] [🚀] Starting trading bot
+[06:37:43.770] [⚙️] Configuration: BTCUSDT | 1m
+[06:37:43.770] [🤖] Models loaded - Direction: DirectionTransformer
+[06:37:43.770] 
+[06:37:43.770] [⏳] Next action in 16.2s
+[06:38:00.000] 
+[06:37:59.999] ========================================
+[06:38:00.000] [🕒] Processing 2025-04-22 06:38:00.000 UTC
+[06:38:00.000] 
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[06:38:00.352] [✅] Fetched 4 candles | Latest close: 88027.62
+[06:38:00.352] 
+[06:38:00.352] [🧠] Processing trading signal...
+[06:38:00.379] [⚙️] Generated 36 binary features from 24 candles
+[06:38:00.385] [📈] Direction Model: UP (confidence: 0.8792)
+[06:38:00.385] [🔍] Signal Analysis:
+[06:38:00.385]     • Direction threshold: 0.5000
+[06:38:00.385]     • Current confidence: 0.8792 > threshold
+[06:38:00.385] [🚦] Trade Signal: BUY
+[06:38:01.192] ERROR: Buy order failed: APIError(code=-1013): Filter failure: NOTIONAL
+[06:38:01.567] [06:38:01.567] [✅] Cycle complete
+[06:38:01.567] ========================================
