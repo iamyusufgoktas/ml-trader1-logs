@@ -11234,3 +11234,48 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.810 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:26:06 ---
+
+
+[19:26:00.004] ========================================
+[🕒] Processing 2025-04-22 19:26:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T19:25:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:25:00+00:00 to 2025-04-22T19:25:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91635.62
+[📊] Candle buffer: 204/204
+
+[19:26:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4860)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4860 < threshold
+[⏱️] Signal generated at: 19:26:00.419
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 91654.01, 'entry_time': datetime.datetime(2025, 4, 22, 19, 5, 1, 98655, tzinfo=datetime.timezone.utc), 'position_size': 0.00010871, 'direction_prob': 0.503688633441925}
+[📊] Current position: 0.00010871 BTC @ 91654.01 | P/L: -0.02% | Duration: 20 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00010871 BTC @ estimated 91635.63 | Est. P/L: -0.02%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 91635.62
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.16 USDT @ 91635.62
+[🔴] Profit/Loss: -0.02%
+[💾] Marked trade as completed in Redis
+[ℹ️] No prediction data available to save
+[19:26:05.908] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 5.904 seconds (before logging)
