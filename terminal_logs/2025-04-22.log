@@ -12406,3 +12406,45 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.852 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 20:14:05 ---
+
+
+[20:13:59.999] ========================================
+[🕒] Processing 2025-04-22 20:13:59.999 UTC
+[📈] Last candle timestamp: 2025-04-22T20:12:00+00:00
+[⏱️] Fetched candles from 2025-04-22T20:12:00+00:00 to 2025-04-22T20:14:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 91281.0
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 20:12, 20:13
+[ℹ️] Cannot evaluate prediction from 20:13:01: missing candles T+1=20:14
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 20:13, 20:14
+[✅] Updated prediction from 20:13:01 with direction: DOWN (compared 20:13 [91281.00] → 20:14 [91281.00])
+
+[20:14:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.9224)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.9224 > threshold
+[⏱️] Signal generated at: 20:14:00.430
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 91333.34, 'entry_time': datetime.datetime(2025, 4, 22, 19, 54, 1, 141848, tzinfo=datetime.timezone.utc), 'position_size': 0.00010801, 'direction_prob': 0.6711361408233643}
+[📊] Current position: 0.00010801 BTC @ 91333.34 | P/L: -0.06% | Duration: 19 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.06% | Position duration: 19 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Created new prediction log file
+[20:14:04.343] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 4.344 seconds (before logging)
