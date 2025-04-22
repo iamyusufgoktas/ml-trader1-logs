@@ -9555,3 +9555,40 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 4.381 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 17:58:02 ---
+
+
+[17:58:00.005] ========================================
+[🕒] Processing 2025-04-22 17:58:00.006 UTC
+[📈] Last candle timestamp: 2025-04-22T17:56:00+00:00
+[⏱️] Fetched candles from 2025-04-22T17:56:00+00:00 to 2025-04-22T17:57:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91355.01
+[📊] Candle buffer: 204/204
+[📊] Latest candle 17:56 → 17:57: 91338.69 → 91355.01 = UP
+[✅] Updated prediction from 17:57:00 with direction: UP
+
+[17:58:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5038)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.5038 < threshold
+[⏱️] Signal generated at: 17:58:00.441
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: NEUTRAL
+[🟡] No position change needed (signal: NEUTRAL, position: False)
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[17:58:01.704] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.699 seconds (before logging)
