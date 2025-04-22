@@ -4966,3 +4966,54 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 3.117 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 14:43:11 ---
+
+
+[14:43:00.005] ========================================
+[🕒] Processing 2025-04-22 14:43:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T14:42:00+00:00
+[⏱️] Fetched candles from 2025-04-22T14:42:00+00:00 to 2025-04-22T14:42:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 90607.9
+[📊] Candle buffer: 204/204
+[⚠️] Warning: Duplicate candle timestamps detected, cannot determine direction
+
+[14:43:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4394)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4394 < threshold
+[⏱️] Signal generated at: 14:43:00.410 (latency: 69.3ms)
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 89880.0, 'entry_time': datetime.datetime(2025, 4, 22, 13, 34, 59, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 89880.00 | P/L: 0.83% | Duration: 1 hours 8 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00012 BTC @ estimated 90628.01 | Est. P/L: 0.83%
+[📡] Sending SELL order for 0.00012 BTC @ market price
+[📝] Logging trade: EXIT at 90642.37
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.00012 BTC for 10.88 USDT @ 90642.37
+[🟢] Profit/Loss: 0.85%
+ERROR: Error saving prediction data: 'CloudTradingBot' object has no attribute 'github_file_exists'
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 2068, in _save_prediction_data
+    if not self.github_file_exists(file_path):
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'CloudTradingBot' object has no attribute 'github_file_exists'
+
+[14:43:11.210] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 11.205 seconds (before logging)
