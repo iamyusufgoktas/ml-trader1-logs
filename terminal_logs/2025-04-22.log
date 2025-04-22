@@ -13812,3 +13812,46 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 3.355 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 20:56:03 ---
+
+
+[20:56:00.004] ========================================
+[🕒] Processing 2025-04-22 20:56:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T20:54:00+00:00
+[⏱️] Fetched candles from 2025-04-22T20:54:00+00:00 to 2025-04-22T20:55:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91120.11
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 20:54, 20:55
+[🔍] Candle T=20:54: Open=91151.29, High=91151.30, Low=91124.40, Close=91124.40
+[🔍] Candle T+1=20:55: Open=91124.40, High=91124.41, Low=91120.10, Close=91120.11
+[📉] T+1 Open < T Open: 91124.40 < 91151.29 (-0.0295%) = DOWN
+[✅] Updated prediction from 20:54:00 with direction: DOWN
+[ℹ️] Cannot evaluate prediction from 20:55:00: missing candles T+T=20:56
+
+[20:56:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.9409)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.9409 > threshold
+[⏱️] Signal generated at: 20:56:00.435
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 91333.34, 'entry_time': datetime.datetime(2025, 4, 22, 19, 54, 1, 141848, tzinfo=datetime.timezone.utc), 'position_size': 0.00010801, 'direction_prob': 0.6711361408233643}
+[📊] Current position: 0.00010801 BTC @ 91333.34 | P/L: -0.23% | Duration: 1 hours 1 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.23% | Position duration: 1 hours 1 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[20:56:02.852] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.848 seconds (before logging)
