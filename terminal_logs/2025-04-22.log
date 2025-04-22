@@ -36,3 +36,47 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 1.569 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 08:48:02 ---
+
+
+[08:48:00.005] ========================================
+[🕒] Processing 2025-04-22 08:48:00.005 UTC
+
+[🕯️] Fetching latest data for BTCUSDT (1m)
+[ℹ️] Found 2 new candles after 2025-04-22 08:46:00
+[⚠️] Warning: Found multiple candles for 1-minute timeframe!
+   → New candle timestamp: 2025-04-22 08:47:00
+   → New candle timestamp: 2025-04-22 08:48:00
+[🛠️] Keeping only the most recent candle to maintain proper 1m sequence
+[📊] Candle buffer: added 1 new, total 204/204
+[📋] Latest candle also stored at key: BTCUSDT_1m_1745311680
+[✅] Latest close: 88374.63
+
+[08:48:00.386] [🧠] Processing trading signal...
+[📊] Feature generation using 204/200 historical candles
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Feature windows used: 5-candle features, 7-candle features, 8-candle features, 10-candle features, 13-candle features, 15-candle features, 20-candle features
+[📈] Longest lookback period: 20 candles for Bollinger Bands & pattern detection
+[📈] Buffer size of 200 ensures we have enough history for all features
+[🧠] Model input: 4 most recent feature rows calculated from 204 candles
+[⚙️] Generated 36 binary features from 204 candles
+[📈] Direction Model: UP (confidence: 0.8811)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8811 > threshold
+[🚦] Trade Signal: BUY
+[⏱️] Prediction completed in 0.089 seconds
+
+[💼] Evaluating position - Current: {'entry_price': 88374.64, 'entry_time': datetime.datetime(2025, 4, 22, 8, 47, 1, 193025, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88374.64 | P/L: -0.00% | Duration: 59 seconds
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.00% | Position duration: 59 seconds
+[⏱️] Trade execution completed in 1.169 seconds
+[08:48:01.644] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.640 seconds (before logging)
