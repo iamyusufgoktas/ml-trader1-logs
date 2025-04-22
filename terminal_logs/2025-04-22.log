@@ -15593,3 +15593,53 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.842 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 22:24:08 ---
+
+
+[22:24:00.005] ========================================
+[🕒] Processing 2025-04-22 22:24:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T22:23:00+00:00
+[⏱️] Fetched candles from 2025-04-22T22:23:00+00:00 to 2025-04-22T22:23:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 92843.09
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 22:23
+[🔍] Candle T=22:23: Open=92859.64, High=92859.64, Low=92777.75, Close=92843.09
+[📉] T Close < T Open: 92843.09 < 92859.64 (-0.0178%) = DOWN
+[✅] Updated prediction from 22:23:29 with direction: DOWN
+
+[22:24:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.3172)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.3172 < threshold
+[⏱️] Signal generated at: 22:24:00.431
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 91817.21, 'entry_time': datetime.datetime(2025, 4, 22, 21, 23, 1, 205836, tzinfo=datetime.timezone.utc), 'position_size': 0.00010771, 'direction_prob': 0.6022338271141052}
+[📊] Current position: 0.00010771 BTC @ 91817.21 | P/L: 1.13% | Duration: 1 hours 0 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00010771 BTC @ estimated 92850.78 | Est. P/L: 1.13%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 92852.89
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.29 USDT @ 92852.89
+[🟢] Profit/Loss: 1.13%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[22:24:07.400] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 7.395 seconds (before logging)
