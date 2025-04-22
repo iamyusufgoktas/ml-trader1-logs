@@ -9393,3 +9393,80 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.830 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 17:51:07 ---
+
+
+[17:51:00.005] ========================================
+[🕒] Processing 2025-04-22 17:51:00.006 UTC
+[📈] Last candle timestamp: 2025-04-22T17:50:00+00:00
+[⏱️] Fetched candles from 2025-04-22T17:50:00+00:00 to 2025-04-22T17:50:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91299.99
+[📊] Candle buffer: 204/204
+[📊] Latest candle 17:50 → 17:50: 91289.05 → 91299.99 = UP
+[✅] Updated prediction from 17:50:11 with direction: UP
+
+[17:51:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6512)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9000
+    • Current confidence: 0.6512 < threshold
+[⏱️] Signal generated at: 17:51:00.445
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 90700.0, 'entry_time': datetime.datetime(2025, 4, 22, 16, 55, 1, 123550, tzinfo=datetime.timezone.utc), 'position_size': 0.00011966}
+[📊] Current position: 0.00011966 BTC @ 90700.00 | P/L: 0.66% | Duration: 55 minutes
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00011966 BTC @ estimated 91300.01 | Est. P/L: 0.66%
+[📡] Sending SELL order for 0.00011966 BTC @ market price
+[❌] Order execution failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[🔄] Attempting to fix lot size issue and retry...
+[ℹ️] Symbol info - Min Qty: 0.0, Step Size: 0.0
+[❌] Retry also failed: float floor division by zero
+[🔍] Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1720, in _exit_trade
+    order = self.binance.create_order(
+        symbol=self.config.BINANCE_SYMBOL,
+    ...<2 lines>...
+        quantity=position_size
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 1382, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 185, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 117, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: LOT_SIZE
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1802, in _exit_trade
+    adjusted_qty = (position_size // step_size) * step_size
+                    ~~~~~~~~~~~~~~^^~~~~~~~~~~
+ZeroDivisionError: float floor division by zero
+
+ERROR: Sell order failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[⚠️] Position is maintained in bot memory. You can try to exit again later.
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[17:51:06.284] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.279 seconds (before logging)
