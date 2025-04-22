@@ -9509,3 +9509,49 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.792 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 17:55:05 ---
+
+
+[17:55:00.002] ========================================
+[🕒] Processing 2025-04-22 17:55:00.003 UTC
+[📈] Last candle timestamp: 2025-04-22T17:54:00+00:00
+[⏱️] Fetched candles from 2025-04-22T17:54:00+00:00 to 2025-04-22T17:54:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91332.99
+[📊] Candle buffer: 204/204
+[📊] Latest candle 17:54 → 17:54: 91317.4 → 91332.99 = UP
+[✅] Updated prediction from 17:54:27 with direction: UP
+
+[17:55:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5053)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.5053 < threshold
+[⏱️] Signal generated at: 17:55:00.432
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 90700.0, 'entry_time': datetime.datetime(2025, 4, 22, 16, 55, 1, 123550, tzinfo=datetime.timezone.utc), 'position_size': 0.00011966}
+[📊] Current position: 0.00011966 BTC @ 90700.00 | P/L: 0.70% | Duration: 59 minutes
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00011966 BTC @ estimated 91332.98 | Est. P/L: 0.70%
+[📡] Sending SELL order for 0.00011966 BTC @ market price
+[❌] Order execution failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[🔄] Attempting to fix lot size issue and retry...
+[ℹ️] Using step size: 1e-05, min qty: 1e-05
+[🔧] Adjusted quantity from 0.00011966 to 0.00011
+[✅] Retry successful, sold 0.00011 BTC
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[17:55:04.384] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 4.381 seconds (before logging)
