@@ -137,3 +137,33 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.464 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 10:27:01 ---
+
+
+[10:27:00.005] ========================================
+[🕒] Processing 2025-04-22 10:27:00.005 UTC
+[📊] Adding 2 new candle(s) to buffer
+[💹] Current price: 88360.0
+[📊] Candle buffer: 204/204
+
+[10:27:00] [🧠] Processing trading signal
+[⚠️] Error converting timestamps: Cannot compare tz-naive and tz-aware timestamps
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.8694)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8694 > threshold
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 88511.02, 'entry_time': datetime.datetime(2025, 4, 22, 10, 20, 57, 45899, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88511.02 | P/L: -0.17% | Duration: 6 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.17% | Position duration: 6 minutes
+[10:27:01.436] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.432 seconds (before logging)
