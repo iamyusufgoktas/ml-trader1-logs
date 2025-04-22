@@ -11583,3 +11583,54 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 2.828 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:42:07 ---
+
+
+[19:42:00.004] ========================================
+[🕒] Processing 2025-04-22 19:42:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T19:41:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:41:00+00:00 to 2025-04-22T19:42:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 91105.77
+[📊] Candle buffer: 204/204
+[📊] Latest candle 19:41 → 19:41: 91077.17 → 91105.77 = UP
+[✅] Updated prediction from 19:41:29 with direction: UP
+[📊] Candle buffer: 204/204
+
+[19:42:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6101)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.6101 < threshold
+[⏱️] Signal generated at: 19:42:00.438
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91037.27, 'entry_time': datetime.datetime(2025, 4, 22, 19, 41, 1, 59302, tzinfo=datetime.timezone.utc), 'position_size': 0.00010841, 'direction_prob': 0.8187132477760315}
+[📊] Current position: 0.00010841 BTC @ 91037.27 | P/L: 0.08% | Duration: 59 seconds
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00010841 BTC @ estimated 91105.77 | Est. P/L: 0.08%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 91105.76
+Error getting trade logs: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content", "status": "404"}
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Complete trades CSV file does not exist yet, will create: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.11 USDT @ 91105.76
+[🟢] Profit/Loss: 0.08%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[19:42:06.898] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.893 seconds (before logging)
