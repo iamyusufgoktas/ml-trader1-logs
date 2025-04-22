@@ -2398,3 +2398,51 @@ Created specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.574 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 08:37:06 ---
+
+
+[08:37:00.004] ========================================
+[🕒] Processing 2025-04-22 08:37:00.005 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[ℹ️] Found 1 new candles after 2025-04-22 08:35:00
+[📊] Candle buffer: added 1 new, total 204/204
+[📋] Latest candle also stored at key: BTCUSDT_1m_1745310960
+[✅] Fetched 9 candles | Latest close: 88466.39
+[📊] Current buffer: 204/204 candles
+
+[08:37:00.420] [🧠] Processing trading signal...
+[ℹ️] Timestamp types in data: {<class 'str'>}
+[✅] Successfully converted and sorted timestamps
+Calculating features for ML model...
+Calculating features for ML model...
+Creating specific ML features...
+Created specific ML features...
+[⚙️] Generated 36 binary features from 204 candles
+[📈] Direction Model: DOWN (confidence: 0.4982)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4982 < threshold
+[🚦] Trade Signal: SELL
+[⏱️] Prediction completed in 0.074 seconds
+
+[💼] Evaluating position - Current: {'entry_price': 88311.19, 'entry_time': datetime.datetime(2025, 4, 22, 7, 23, 44, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88311.19 | P/L: 0.18% | Duration: 1 hours 13 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00012 BTC @ estimated 88466.39 | Est. P/L: 0.18%
+[📡] Sending SELL order for 0.00012 BTC @ market price
+[📝] Logging trade: EXIT at 88466.39
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.00012 BTC for 10.62 USDT @ 88466.39
+[🟢] Profit/Loss: 0.18%
+[⏱️] Trade execution completed in 5.510 seconds
+[08:37:06.004] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.001 seconds (before logging)
