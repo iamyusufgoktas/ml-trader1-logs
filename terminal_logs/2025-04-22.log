@@ -1587,3 +1587,40 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.477 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 07:38:01 ---
+
+
+[07:38:00.002] ========================================
+[🕒] Processing 2025-04-22 07:38:00.002 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[✅] Fetched 4 candles | Latest close: 88332.08
+
+[07:38:00.343] [🧠] Processing trading signal...
+Calculating features for ML model...
+Creating specific ML features...
+[⚙️] Generated 36 binary features from 28 candles
+[📈] Direction Model: UP (confidence: 0.8163)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8163 > threshold
+[🚦] Trade Signal: BUY
+[⏱️] Prediction completed in 0.045 seconds
+
+[💼] Evaluating position - Current: {'entry_price': 88311.19, 'entry_time': datetime.datetime(2025, 4, 22, 7, 23, 44), 'position_size': 0.00012}
+ERROR: Signal processing error: can't subtract offset-naive and offset-aware datetimes
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1095, in process_signal
+    self.execute_trade(signal)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1140, in execute_trade
+    duration_seconds = (datetime.now(timezone.utc) - self.current_position['entry_time']).total_seconds()
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TypeError: can't subtract offset-naive and offset-aware datetimes
+
+[07:38:01.091] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.090 seconds (before logging)
