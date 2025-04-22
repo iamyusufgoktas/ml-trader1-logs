@@ -699,3 +699,45 @@ AttributeError: 'float' object has no attribute 'item'
 ========================================
 
 [🕒] Processing completed in 0.885 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 10:01:01 ---
+
+
+[10:01:00.004] ========================================
+[🕒] Processing 2025-04-22 10:01:00.004 UTC
+[🔍] Last candle in Redis: time=2025-04-22 10:00:00+00:00, close=88495.01
+[🔍] Requesting candles from Binance starting at timestamp 1745316000000
+[🔍] Received 1 candles from Binance
+[🔍] Binance candle 0: time=2025-04-22 10:00:00+00:00, open=88574.33, close=88488.01
+[🔍] Filtered out 1 candles we already have
+[⚠️] No new candles to add!
+
+[10:01:00] [🧠] Processing trading signal
+[🔍] Generating features from 204 candles
+[🔍] Candle time range: 2025-04-22 06:37:00 to 2025-04-22 10:00:00
+[🔍] Last candle age: 1.0 minutes
+[🔍] Calling feature generation function
+Calculating features for ML model...
+Creating specific ML features...
+[🔍] Generated features with shape: (204, 36)
+[🧠] Using 204 candles to generate features; feeding last 4 rows to model
+[🔍] Feature hash: -3849816913651085836 (should change each cycle)
+[🔍] First few feature values from first row: [1. 1. 0.]
+[🔍] Last few feature values from last row: [0. 0. 0.]
+[🔍] Model input hash: 4691322828362946821 (should change each cycle)
+[📈] Direction Model: UP   (confidence: 0.9366)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.9366 > threshold
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 88495.01, 'entry_time': datetime.datetime(2025, 4, 22, 9, 59, 8, 806044, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88495.01 | P/L: -0.01% | Duration: 1 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.01% | Position duration: 1 minutes
+[10:01:01.514] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.510 seconds (before logging)
