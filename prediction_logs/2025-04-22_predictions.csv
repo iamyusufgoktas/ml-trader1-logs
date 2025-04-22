@@ -1,6 +1,0 @@
-timestamp,model_prediction,confidence,actual_direction,correct
-2025-04-22 15:47:30,BUY,0.5396,DOWN,0
-2025-04-22 15:48:00,BUY,0.5798,UP,1
-2025-04-22 15:49:00,BUY,0.6136,DOWN,0
-2025-04-22 15:50:00,BUY,0.5103,UP,1
-2025-04-22 15:52:12,SUMMARY,0.5000,4,2
