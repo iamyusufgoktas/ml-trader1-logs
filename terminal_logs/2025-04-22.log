@@ -861,3 +861,35 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.489 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 07:15:01 ---
+
+
+[07:14:59.999] ========================================
+[🕒] Processing 2025-04-22 07:14:59.999 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[✅] Fetched 4 candles | Latest close: 88173.92
+
+[07:15:00.335] [🧠] Processing trading signal...
+Calculating features for ML model...
+Creating specific ML features...
+[⚙️] Generated 36 binary features from 24 candles
+[📈] Direction Model: UP (confidence: 0.8426)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8426 > threshold
+[🚦] Trade Signal: BUY
+[⏱️] Prediction completed in 0.042 seconds
+
+[💼] Evaluating position - Current: {'entry_price': 88249.49, 'entry_time': datetime.datetime(2025, 4, 22, 7, 6, 42, 243092, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88249.49 | P/L: -0.09% | Duration: 8 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.09% | Position duration: 8 minutes
+[⏱️] Trade execution completed in 1.044 seconds
+[07:15:01.421] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.422 seconds (before logging)
