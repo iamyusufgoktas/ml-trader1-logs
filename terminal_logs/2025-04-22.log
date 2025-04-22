@@ -2446,3 +2446,45 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 6.001 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 08:38:01 ---
+
+
+[08:38:00.001] ========================================
+[🕒] Processing 2025-04-22 08:38:00.001 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[ℹ️] Found 2 new candles after 2025-04-22 08:36:00
+[⚠️] Warning: Found multiple candles for 1-minute timeframe!
+   → New candle timestamp: 2025-04-22 08:37:00
+   → New candle timestamp: 2025-04-22 08:38:00
+[🛠️] Keeping only the most recent candle to maintain proper 1m sequence
+[📊] Candle buffer: added 1 new, total 204/204
+[📋] Latest candle also stored at key: BTCUSDT_1m_1745311080
+[✅] Fetched 10 candles | Latest close: 88449.21
+[📊] Current buffer: 204/204 candles
+
+[08:38:00.367] [🧠] Processing trading signal...
+[ℹ️] Timestamp types in data: {<class 'str'>}
+[✅] Successfully converted and sorted timestamps
+Calculating features for ML model...
+Calculating features for ML model...
+Creating specific ML features...
+Created specific ML features...
+[⚙️] Generated 36 binary features from 204 candles
+[📈] Direction Model: DOWN (confidence: 0.4943)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4943 < threshold
+[🚦] Trade Signal: SELL
+[⏱️] Prediction completed in 0.075 seconds
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: SELL
+[🟡] No position change needed (signal: SELL, position: False)
+[⏱️] Trade execution completed in 0.000 seconds
+[08:38:00.442] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 0.441 seconds (before logging)
