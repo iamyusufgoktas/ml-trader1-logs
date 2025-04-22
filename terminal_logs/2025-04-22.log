@@ -2396,3 +2396,11 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 0.337 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 12:34:00 ---
+
+
+[12:34:00.005] ========================================
+[🕒] Processing 2025-04-22 12:34:00.006 UTC
+[📊] Fetching BTCUSDT candles from Binance...
