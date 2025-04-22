@@ -6072,3 +6072,43 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 13.293 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 15:27:14 ---
+
+
+[15:27:00.005] ========================================
+[🕒] Processing 2025-04-22 15:27:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T15:26:00+00:00
+[⏱️] Fetched candles from 2025-04-22T15:26:00+00:00 to 2025-04-22T15:26:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 90976.01
+[📊] Candle buffer: 204/204
+[📊] Latest candle 15:26 → 15:26: 91070.17 → 90976.01 = DOWN
+[✅] Updated prediction from 15:26:00 with direction: DOWN
+
+[15:27:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.8378)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8378 > threshold
+[⏱️] Signal generated at: 15:27:00.513
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 91232.39, 'entry_time': datetime.datetime(2025, 4, 22, 15, 19, 1, 381937, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 91232.39 | P/L: -0.25% | Duration: 7 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.25% | Position duration: 8 minutes
+[⏱️] Adding delay before saving prediction data to GitHub...
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[15:27:13.786] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 13.782 seconds (before logging)
