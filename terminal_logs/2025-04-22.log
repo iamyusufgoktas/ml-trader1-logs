@@ -209,3 +209,31 @@ Creating specific ML features...
 [📊] Candle buffer: no new candles to add, total 204/204
 [✅] Latest close: 88392.67
 [08:58:53.788] [❌] Trading cycle error: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
+
+
+--- LOG CONTINUATION AT 09:31:02 ---
+
+
+[09:31:00.000] ========================================
+[🕒] Processing 2025-04-22 09:31:00.000 UTC
+ERROR: Error fetching candles: 'CloudTradingBot' object has no attribute 'debug'
+
+[09:31:00] [🧠] Processing trading signal
+Calculating features for ML model...
+Creating specific ML features...
+[🧠] Using 204 candles to generate features; feeding last 4 rows to model
+[📈] Direction Model: UP   (confidence: 0.5044)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.5044 > threshold
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 88511.65, 'entry_time': datetime.datetime(2025, 4, 22, 9, 29, 23, 641046, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88511.65 | P/L: 0.02% | Duration: 1 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.02% | Position duration: 1 minutes
+[09:31:01.927] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.928 seconds (before logging)
