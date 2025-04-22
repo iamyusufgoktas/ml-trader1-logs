@@ -6535,3 +6535,54 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 12.901 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 15:51:13 ---
+
+
+[15:51:00.002] ========================================
+[🕒] Processing 2025-04-22 15:51:00.002 UTC
+[📈] Last candle timestamp: 2025-04-22T15:49:00+00:00
+[⏱️] Fetched candles from 2025-04-22T15:49:00+00:00 to 2025-04-22T15:50:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 90719.81
+[📊] Candle buffer: 204/204
+[📊] Latest candle 15:49 → 15:49: 90718.58 → 90713.92 = DOWN
+[✅] Updated prediction from 15:49:00 with direction: DOWN (candle: 15:49 → 15:49)
+[ℹ️] Prediction from 15:50:00 waiting for next candle
+[📊] Candle buffer: 204/204
+[📊] Latest candle 15:49 → 15:50: 90713.92 → 90719.81 = UP
+[ℹ️] Prediction from 15:50:00 waiting for next candle
+
+[15:51:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5511)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.5511 > threshold
+[⏱️] Signal generated at: 15:51:00.415
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 89880.0, 'entry_time': datetime.datetime(2025, 4, 22, 13, 34, 59, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 89880.00 | P/L: 0.93% | Duration: 2 hours 16 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.93% | Position duration: 2 hours 16 minutes
+[⏱️] Adding delay before saving prediction data to GitHub...
+[📊] Found 3 completed predictions, 1 correct (33.3%)
+[📈] Processed: 2025-04-22 15:47:30 -> prediction=UP, actual=DOWN, correct=0
+[📈] Processed: 2025-04-22 15:48:00 -> prediction=UP, actual=UP, correct=1
+[📈] Processed: 2025-04-22 15:49:00 -> prediction=UP, actual=DOWN, correct=0
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[ℹ️] Note: 2 predictions still waiting for direction data
+   - Prediction from 15:50:00 waiting for next candle
+   - Prediction from 15:51:00 waiting for next candle
+[📊] Updated prediction log with 1 new entries
+[15:51:12.754] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 12.752 seconds (before logging)
