@@ -655,3 +655,47 @@ TypeError: Cannot subtract tz-naive and tz-aware datetime-like objects.
 ========================================
 
 [🕒] Processing completed in 0.810 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 09:59:01 ---
+
+
+[09:59:00.000] ========================================
+[🕒] Processing 2025-04-22 09:59:00.000 UTC
+[🔍] Last candle in Redis: time=2025-04-22 09:58:00+00:00, close=88515.03
+[🔍] Requesting candles from Binance starting at timestamp 1745315880000
+[🔍] Received 1 candles from Binance
+[🔍] Binance candle 0: time=2025-04-22 09:58:00+00:00, open=88494.84, close=88515.04
+[🔍] Filtered out 1 candles we already have
+[⚠️] No new candles to add!
+
+[09:59:00] [🧠] Processing trading signal
+[🔍] Generating features from 204 candles
+[🔍] Candle time range: 2025-04-22 06:35:00 to 2025-04-22 09:58:00
+[🔍] Last candle age: 1.0 minutes
+[🔍] Calling feature generation function
+Calculating features for ML model...
+Creating specific ML features...
+[🔍] Generated features with shape: (204, 36)
+[🧠] Using 204 candles to generate features; feeding last 4 rows to model
+[🔍] Feature hash: 823377575424046805 (should change each cycle)
+[🔍] First few feature values from first row: [0. 0. 0.]
+[🔍] Last few feature values from last row: [0. 0. 0.]
+[🔍] Model input hash: 5537978599144886360 (should change each cycle)
+[📈] Direction Model: UP   (confidence: 0.8763)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+ERROR: Error processing signal: 'float' object has no attribute 'item'
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1267, in process_signal
+    return self._calculate_signal(direction_conf)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1286, in _calculate_signal
+    print(f"    • Current confidence: {direction_prob.item():.4f} {'> threshold' if direction_prob.item() >= threshold else '< threshold'}")
+                                       ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'float' object has no attribute 'item'
+
+[09:59:00.886] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 0.885 seconds (before logging)
