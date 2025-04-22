@@ -10697,3 +10697,51 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 2.849 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 18:58:08 ---
+
+
+[18:58:00.005] ========================================
+[🕒] Processing 2025-04-22 18:58:00.006 UTC
+[📈] Last candle timestamp: 2025-04-22T18:57:00+00:00
+[⏱️] Fetched candles from 2025-04-22T18:57:00+00:00 to 2025-04-22T18:57:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91478.81
+[📊] Candle buffer: 204/204
+[📊] Latest candle 18:57 → 18:57: 91488.44 → 91478.81 = DOWN
+[✅] Updated prediction from 18:57:21 with direction: DOWN
+
+[18:58:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6721)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.6721 < threshold
+[⏱️] Signal generated at: 18:58:00.450
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91471.63, 'entry_time': datetime.datetime(2025, 4, 22, 18, 57, 1, 84803, tzinfo=datetime.timezone.utc), 'position_size': 0.00010891, 'direction_prob': 0.7387022972106934}
+[📊] Current position: 0.00010891 BTC @ 91471.63 | P/L: 0.02% | Duration: 59 seconds
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00010891 BTC @ estimated 91489.99 | Est. P/L: 0.02%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 91489.99
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.15 USDT @ 91489.99
+[🟢] Profit/Loss: 0.02%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[18:58:07.185] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 7.181 seconds (before logging)
