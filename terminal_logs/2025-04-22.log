@@ -2625,3 +2625,20 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 4.096 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 12:54:02 ---
+
+
+[12:54:00.006] ========================================
+[🕒] Processing 2025-04-22 12:54:00.009 UTC
+[📈] Last candle timestamp: 2025-04-22T12:53:00+00:00
+[⏱️] Fetched candles from 2025-04-22T12:53:00+00:00 to 2025-04-22T12:53:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[ℹ️] No new candles to add
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 0 new entries
+[12:54:01.626] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.620 seconds (before logging)
