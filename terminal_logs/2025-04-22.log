@@ -8880,3 +8880,42 @@ ERROR: Sell order failed: APIError(code=-1013): Filter failure: LOT_SIZE
 ========================================
 
 [🕒] Processing completed in 5.117 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 17:37:03 ---
+
+
+[17:37:00.006] ========================================
+[🕒] Processing 2025-04-22 17:37:00.006 UTC
+[📈] Last candle timestamp: 2025-04-22T17:36:00+00:00
+[⏱️] Fetched candles from 2025-04-22T17:36:00+00:00 to 2025-04-22T17:36:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91315.15
+[📊] Candle buffer: 204/204
+[📊] Latest candle 17:36 → 17:36: 91335.33 → 91315.15 = DOWN
+[✅] Updated prediction from 17:36:35 with direction: DOWN
+
+[17:37:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5016)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.5016 > threshold
+[⏱️] Signal generated at: 17:37:00.437
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 90700.0, 'entry_time': datetime.datetime(2025, 4, 22, 16, 55, 1, 123550, tzinfo=datetime.timezone.utc), 'position_size': 0.00011966}
+[📊] Current position: 0.00011966 BTC @ 90700.00 | P/L: 0.68% | Duration: 41 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.68% | Position duration: 41 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[17:37:03.009] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 3.003 seconds (before logging)
