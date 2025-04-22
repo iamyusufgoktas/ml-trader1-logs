@@ -198,3 +198,14 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.523 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 08:58:54 ---
+
+[08:58:53.788] 
+[08:58:53.432] ========== TRADING CYCLE ==========
+
+[🕯️] Fetching latest data for BTCUSDT (1m)
+[📊] Candle buffer: no new candles to add, total 204/204
+[✅] Latest close: 88392.67
+[08:58:53.788] [❌] Trading cycle error: The truth value of a DataFrame is ambiguous. Use a.empty, a.bool(), a.item(), a.any() or a.all().
