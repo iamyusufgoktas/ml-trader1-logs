@@ -850,3 +850,43 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 2.905 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 23:45:01 ---
+
+
+[23:45:00.074] ========================================
+[🕒] Processing 2025-04-22 23:45:00.075 UTC
+[📈] Last candle timestamp: 2025-04-22T23:30:00+00:00
+[⏱️] Fetched candles from 2025-04-22T23:30:00+00:00 to 2025-04-22T23:30:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 93510.46
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 23:30
+[ℹ️] Cannot evaluate prediction from 23:43:45: missing candle T=23:43
+
+[23:45:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6501)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.6501 > threshold
+[⏱️] Signal generated at: 23:45:00.675
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: BUY
+[🟢] Entering long position...
+[💰] Available USDT balance: 0.83
+[⚠️] USDT amount (0.82) may be below minimum order size
+[📡] Sending BUY order for 0.82 USDT @ market price
+ERROR: Buy order failed: APIError(code=-1013): Filter failure: NOTIONAL
+[ℹ️] No prediction data available to save
+[23:45:01.476] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.403 seconds (before logging)
