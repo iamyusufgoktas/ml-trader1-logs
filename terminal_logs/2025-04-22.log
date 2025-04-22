@@ -5059,3 +5059,78 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 3.565 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 14:57:07 ---
+
+
+[14:57:00.005] ========================================
+[🕒] Processing 2025-04-22 14:57:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T14:56:00+00:00
+[⏱️] Fetched candles from 2025-04-22T14:56:00+00:00 to 2025-04-22T14:56:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 90670.86
+[📊] Candle buffer: 204/204
+[📊] Latest candle 14:56 → 14:56: 90688.44 → 90670.86 = DOWN
+[✅] Updated prediction from 14:56:27 with direction: DOWN
+
+[14:57:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.8111)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8111 > threshold
+[⏱️] Signal generated at: 14:57:00.425
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 89880.0, 'entry_time': datetime.datetime(2025, 4, 22, 13, 34, 59, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 89880.00 | P/L: 0.88% | Duration: 1 hours 22 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.88% | Position duration: 1 hours 22 minutes
+[⏱️] Adding 5-second delay before saving prediction data to GitHub...
+ERROR: Error saving prediction data: Cannot save file into a non-existent directory: 'prediction_logs'
+Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 2063, in _save_prediction_data
+    df.to_csv(csv_path, index=False)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/util/_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/core/generic.py", line 3967, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        path_or_buf,
+        ^^^^^^^^^^^^
+    ...<14 lines>...
+        storage_options=storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/io/formats/format.py", line 1014, in to_csv
+    csv_formatter.save()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/io/formats/csvs.py", line 251, in save
+    with get_handle(
+         ~~~~~~~~~~^
+        self.filepath_or_buffer,
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        storage_options=self.storage_options,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ) as handles:
+    ^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/io/common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/io/common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'prediction_logs'
+
+[14:57:06.936] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.931 seconds (before logging)
