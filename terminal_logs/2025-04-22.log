@@ -1929,3 +1929,40 @@ Creating specific ML features...
 [🕒] Processing 2025-04-22 07:59:00.005 UTC
 
 [🕯️] Fetching candle data for BTCUSDT (1m)
+
+
+--- LOG CONTINUATION AT 08:01:01 ---
+
+
+[08:01:00.005] ========================================
+[🕒] Processing 2025-04-22 08:01:00.005 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[⚠️] Error comparing timestamps: Invalid comparison between dtype=datetime64[ns] and int64
+[ℹ️] Existing timestamp type: <class 'numpy.int64'>
+[ℹ️] New timestamp type: <class 'pandas._libs.tslibs.timestamps.Timestamp'>
+[📊] Candle buffer: added 3 new, total 63/204
+[✅] Fetched 3 candles | Latest close: 88508.60
+
+[08:01:00.349] [🧠] Processing trading signal...
+[⚠️] Warning: Only 63/204 candles available for feature generation
+ERROR: Signal processing error: '<' not supported between instances of 'str' and 'int'
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1202, in process_signal
+    features, num_candles = self.generate_features()
+                            ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1170, in generate_features
+    df = pd.DataFrame(raw_data).sort_values('timestamp')
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/core/frame.py", line 7200, in sort_values
+    indexer = nargsort(
+        k, kind=kind, ascending=ascending, na_position=na_position, key=key
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/pandas/core/sorting.py", line 439, in nargsort
+    indexer = non_nan_idx[non_nans.argsort(kind=kind)]
+                          ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[08:01:00.729] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 0.725 seconds (before logging)
