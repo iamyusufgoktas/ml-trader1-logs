@@ -11812,3 +11812,58 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 2.784 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:48:06 ---
+
+
+[19:48:00.004] ========================================
+[🕒] Processing 2025-04-22 19:48:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T19:47:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:47:00+00:00 to 2025-04-22T19:47:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91288.6
+[📊] Candle buffer: 204/204
+[📊] Latest candle 19:47 → 19:47: 91173.91 → 91288.6 = UP
+[✅] Updated prediction from 19:47:20 with direction: UP
+
+[19:48:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6087)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.6087 < threshold
+[⏱️] Signal generated at: 19:48:00.433
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91195.08, 'entry_time': datetime.datetime(2025, 4, 22, 19, 47, 1, 120253, tzinfo=datetime.timezone.utc), 'position_size': 0.00010821, 'direction_prob': 0.6568436026573181}
+[📊] Current position: 0.00010821 BTC @ 91195.08 | P/L: 0.10% | Duration: 59 seconds
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00010821 BTC @ estimated 91288.60 | Est. P/L: 0.10%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 91295.36
+ERROR: Failed to log trade: 'exit_signal_prob'
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 406, in log_trade
+    self._save_complete_trade(complete_trade)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 506, in _save_complete_trade
+    'exit_signal_prob': f"{float(trade_data['exit_signal_prob']):.4f}",
+                                 ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+KeyError: 'exit_signal_prob'
+
+[💸] Successfully sold 0.0001 BTC for 9.13 USDT @ 91295.36
+[🟢] Profit/Loss: 0.11%
+[💾] Marked trade as completed in Redis
+[✅] Removed trade 41795018640 from pending trades
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[19:48:05.154] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 5.150 seconds (before logging)
