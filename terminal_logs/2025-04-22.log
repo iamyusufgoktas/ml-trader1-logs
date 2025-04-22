@@ -11674,3 +11674,59 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 1.454 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:44:06 ---
+
+
+[19:44:00.004] ========================================
+[🕒] Processing 2025-04-22 19:44:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T19:43:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:43:00+00:00 to 2025-04-22T19:44:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 91142.41
+[📊] Candle buffer: 204/204
+[📊] Latest candle 19:43 → 19:43: 91153.39 → 91142.4 = DOWN
+[✅] Updated prediction from 19:43:16 with direction: DOWN
+[📊] Candle buffer: 204/204
+
+[19:44:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5205)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.5205 < threshold
+[⏱️] Signal generated at: 19:44:00.435
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91139.91, 'entry_time': datetime.datetime(2025, 4, 22, 19, 43, 1, 66125, tzinfo=datetime.timezone.utc), 'position_size': 0.00010831, 'direction_prob': 0.7709018588066101}
+[📊] Current position: 0.00010831 BTC @ 91139.91 | P/L: 0.00% | Duration: 59 seconds
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00010831 BTC @ estimated 91142.41 | Est. P/L: 0.00%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 91142.4
+ERROR: Failed to log trade: float() argument must be a string or a real number, not 'NoneType'
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 406, in log_trade
+    self._save_complete_trade(complete_trade)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 506, in _save_complete_trade
+    'exit_signal_prob': f"{float(trade_data.get('exit_signal_prob')):.4f}",
+                           ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: float() argument must be a string or a real number, not 'NoneType'
+
+[💸] Successfully sold 0.0001 BTC for 9.11 USDT @ 91142.40
+[🟢] Profit/Loss: 0.00%
+[💾] Marked trade as completed in Redis
+[✅] Removed trade 41794842290 from pending trades
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[19:44:05.265] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 5.261 seconds (before logging)
