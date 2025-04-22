@@ -7568,3 +7568,42 @@ ERROR: Buy order failed: cannot access local variable 'trade_data' where it is n
 ========================================
 
 [🕒] Processing completed in 2.975 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 16:51:04 ---
+
+
+[16:51:00.001] ========================================
+[🕒] Processing 2025-04-22 16:51:00.001 UTC
+[📈] Last candle timestamp: 2025-04-22T16:50:00+00:00
+[⏱️] Fetched candles from 2025-04-22T16:50:00+00:00 to 2025-04-22T16:50:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 90719.31
+[📊] Candle buffer: 204/204
+[📊] Latest candle 16:50 → 16:50: 90690.0 → 90719.31 = UP
+[✅] Updated prediction from 16:50:27 with direction: UP
+
+[16:51:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.8603)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.8603 > threshold
+[⏱️] Signal generated at: 16:51:00.427
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 90690.0, 'entry_time': datetime.datetime(2025, 4, 22, 16, 49, 26, 349998, tzinfo=datetime.timezone.utc), 'position_size': 0.00011988}
+[📊] Current position: 0.00011988 BTC @ 90690.00 | P/L: 0.03% | Duration: 1 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.04% | Position duration: 1 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Created new prediction log file
+[16:51:04.004] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 4.004 seconds (before logging)
