@@ -751,3 +751,53 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.977 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 23:33:07 ---
+
+
+[23:33:00.007] ========================================
+[🕒] Processing 2025-04-22 23:33:00.007 UTC
+[📈] Last candle timestamp: 2025-04-22T23:32:00+00:00
+[⏱️] Fetched candles from 2025-04-22T23:32:00+00:00 to 2025-04-22T23:32:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 93511.7
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 23:32
+[🔍] Candle T=23:32: Open=93498.02, High=93551.50, Low=93429.95, Close=93511.70
+[📈] T Close > T Open: 93511.70 > 93498.02 (+0.0146%) = UP
+[✅] Updated prediction from 23:32:14 with direction: UP
+
+[23:33:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.2768)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.2768 < threshold
+[⏱️] Signal generated at: 23:33:00.402
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 93008.67, 'entry_time': datetime.datetime(2025, 4, 22, 23, 8, 1, 278311, tzinfo=datetime.timezone.utc), 'position_size': 0.00010741, 'direction_prob': 0.5508851408958435}
+[📊] Current position: 0.00010741 BTC @ 93008.67 | P/L: 0.56% | Duration: 24 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00010741 BTC @ estimated 93528.05 | Est. P/L: 0.56%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 93543.99
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.35 USDT @ 93543.99
+[🟢] Profit/Loss: 0.58%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[23:33:07.072] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 7.066 seconds (before logging)
