@@ -1,0 +1,38 @@
+
+[08:47:00.004] ========================================
+[🕒] Processing 2025-04-22 08:47:00.005 UTC
+
+[🕯️] Fetching latest data for BTCUSDT (1m)
+[📊] Candle buffer: no new candles to add, total 204/204
+[✅] Latest close: 88374.64
+
+[08:47:00.379] [🧠] Processing trading signal...
+[📊] Feature generation using 204/200 historical candles
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Feature windows used: 5-candle features, 7-candle features, 8-candle features, 10-candle features, 13-candle features, 15-candle features, 20-candle features
+[📈] Longest lookback period: 20 candles for Bollinger Bands & pattern detection
+[📈] Buffer size of 200 ensures we have enough history for all features
+[🧠] Model input: 4 most recent feature rows calculated from 204 candles
+[⚙️] Generated 36 binary features from 204 candles
+[📈] Direction Model: UP (confidence: 0.9049)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.9049 > threshold
+[🚦] Trade Signal: BUY
+[⏱️] Prediction completed in 0.101 seconds
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: BUY
+[🟢] Entering long position...
+[💰] Available USDT balance: 10.87
+[📡] Sending BUY order for 10.76 USDT @ market price
+[📝] Logging trade: ENTRY at 88374.64
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💰] Successfully bought 0.00012 BTC for 10.76 USDT @ 88374.64
+[⏱️] Trade execution completed in 1.093 seconds
+[08:47:01.573] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.569 seconds (before logging)
