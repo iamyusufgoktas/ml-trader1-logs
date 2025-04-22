@@ -11634,3 +11634,43 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 6.893 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:43:02 ---
+
+
+[19:43:00.005] ========================================
+[🕒] Processing 2025-04-22 19:43:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T19:42:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:42:00+00:00 to 2025-04-22T19:42:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[ℹ️] No new candles to add
+[🔄] Making prediction at timeframe boundary
+
+[19:43:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7709)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7709 > threshold
+[⏱️] Signal generated at: 19:43:00.418
+[🚦] Trade Signal: BUY
+[🚦] Boundary Trade Signal: BUY
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: BUY
+[🟢] Entering long position...
+[💰] Available USDT balance: 10.09
+[📡] Sending BUY order for 9.99 USDT @ market price
+[💾] Saved current trade state to Redis
+[📝] Logging trade: ENTRY at 91139.91
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💰] Successfully bought 0.0001 BTC for 9.99 USDT @ 91139.91
+[ℹ️] No prediction data available to save
+[19:43:01.458] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.454 seconds (before logging)
