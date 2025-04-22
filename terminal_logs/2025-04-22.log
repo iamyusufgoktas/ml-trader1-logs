@@ -509,3 +509,36 @@ ERROR: Buy order failed: APIError(code=-1013): Filter failure: NOTIONAL
 ========================================
 
 [🕒] Processing completed in 1.517 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 07:04:01 ---
+
+
+[07:04:00.000] ========================================
+[🕒] Processing 2025-04-22 07:04:00.000 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[✅] Fetched 4 candles | Latest close: 88192.40
+
+[07:04:00.348] [🧠] Processing trading signal...
+Calculating features for ML model...
+Creating specific ML features...
+[⚙️] Generated 36 binary features from 24 candles
+[📈] Direction Model: UP (confidence: 0.7953)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7953 > threshold
+[🚦] Trade Signal: BUY
+[⏱️] Prediction completed in 0.039 seconds
+
+[💼] Evaluating position - Current: None
+[🟢] Entering long position...
+[💰] Available USDT balance: 0.26
+[⚠️] USDT amount (0.25) may be below minimum order size
+[📡] Sending BUY order for 0.25 USDT @ market price
+ERROR: Buy order failed: APIError(code=-1013): Filter failure: NOTIONAL
+[⏱️] Trade execution completed in 1.068 seconds
+[07:04:01.454] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.455 seconds (before logging)
