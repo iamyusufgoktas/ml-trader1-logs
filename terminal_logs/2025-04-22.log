@@ -288,3 +288,32 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 5.843 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 10:39:00 ---
+
+
+[10:39:00.003] ========================================
+[🕒] Processing 2025-04-22 10:39:00.003 UTC
+[📈] Last candle timestamp: 2025-04-22T10:38:00+00:00
+[⏱️] Fetched candles from 2025-04-22T10:38:00+00:00 to 2025-04-22T10:38:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[ℹ️] No new candles to add
+
+[10:39:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4017)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4017 < threshold
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: SELL
+[🟡] No position change needed (signal: SELL, position: False)
+[10:39:00.430] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 0.427 seconds (before logging)
