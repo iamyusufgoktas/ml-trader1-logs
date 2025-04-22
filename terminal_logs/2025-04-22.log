@@ -78,3 +78,55 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.931 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 22:42:07 ---
+
+
+[22:42:00.004] ========================================
+[🕒] Processing 2025-04-22 22:42:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T22:41:00+00:00
+[⏱️] Fetched candles from 2025-04-22T22:41:00+00:00 to 2025-04-22T22:41:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 92700.36
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 22:41
+[🔍] Candle T=22:41: Open=92650.01, High=92733.76, Low=92634.97, Close=92700.36
+[📈] T Close > T Open: 92700.36 > 92650.01 (+0.0543%) = UP
+[✅] Updated prediction from 22:41:27 with direction: UP
+
+[22:42:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7759)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.7759 < threshold
+[⏱️] Signal generated at: 22:42:00.418
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 92916.01, 'entry_time': datetime.datetime(2025, 4, 22, 22, 26, 1, 137649, tzinfo=datetime.timezone.utc), 'position_size': 0.00010761, 'direction_prob': 0.7194080948829651}
+[📊] Current position: 0.00010761 BTC @ 92916.01 | P/L: -0.23% | Duration: 15 minutes
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00010761 BTC @ estimated 92700.36 | Est. P/L: -0.23%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 92700.35
+Error getting trade logs: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content", "status": "404"}
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Complete trades CSV file does not exist yet, will create: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.27 USDT @ 92700.35
+[🔴] Profit/Loss: -0.23%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[22:42:06.904] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.900 seconds (before logging)
