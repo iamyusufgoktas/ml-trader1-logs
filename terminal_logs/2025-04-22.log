@@ -9999,3 +9999,57 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 3.276 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 18:14:10 ---
+
+
+[18:14:00.005] ========================================
+[🕒] Processing 2025-04-22 18:14:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T18:13:00+00:00
+[⏱️] Fetched candles from 2025-04-22T18:13:00+00:00 to 2025-04-22T18:13:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91237.02
+[📊] Candle buffer: 204/204
+[📊] Latest candle 18:13 → 18:13: 91200.0 → 91237.02 = UP
+[✅] Updated prediction from 18:13:19 with direction: UP
+
+[18:14:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7787)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.7787 < threshold
+[⏱️] Signal generated at: 18:14:00.427
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91249.35, 'entry_time': datetime.datetime(2025, 4, 22, 18, 12, 1, 131769, tzinfo=datetime.timezone.utc), 'position_size': 0.00011944}
+[📊] Current position: 0.00011944 BTC @ 91249.35 | P/L: -0.01% | Duration: 1 minutes
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00011944 BTC @ estimated 91237.01 | Est. P/L: -0.01%
+[📡] Sending SELL order for 0.00011944 BTC @ market price
+[❌] Order execution failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[🔄] Attempting to fix lot size issue with direct approach...
+[ℹ️] Actual BTC balance: 0.00011944
+[ℹ️] Step size from Binance: 1e-05
+[🔧] Adjusted quantity from 0.00011944 to 0.00011
+[📡] Retrying SELL with quantity: 0.00011
+[✅] Retry successful, sold 0.00011 BTC for 10.04 USDT @ 91237.01
+[📝] Logging trade: EXIT at 91237.01
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[🔴] Profit/Loss: -0.01%
+[💾] Marked trade as completed in Redis
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[18:14:09.361] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 9.355 seconds (before logging)
