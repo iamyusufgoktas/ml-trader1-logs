@@ -29,3 +29,39 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 1.464 seconds (before logging)
+
+
+[06:48:00.004] ========================================
+[🕒] Processing 2025-04-22 06:48:00.005 UTC
+
+[🕯️] Fetching candle data for BTCUSDT (1m)
+[✅] Fetched 4 candles | Latest close: 88080.96
+
+[06:48:00.356] [🧠] Processing trading signal...
+Calculating features for ML model...
+Creating specific ML features...
+[⚙️] Generated 36 binary features from 24 candles
+[📈] Direction Model: DOWN (confidence: 0.4949)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4949 < threshold
+[🚦] Trade Signal: SELL
+[⏱️] Prediction completed in 0.021 seconds
+
+[💼] Evaluating position - Current: {'entry_price': 88050.07, 'entry_time': datetime.datetime(2025, 4, 22, 6, 47, 1, 65862, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[🔴] Exiting position...
+[📡] Sending SELL order for 0.00012 BTC @ market price
+[📝] Logging trade: EXIT at 88080.95
+Error getting trade logs: 404 {"message": "Not Found", "documentation_url": "https://docs.github.com/rest/repos/contents#get-repository-content", "status": "404"}
+Saving complete trade data to CSV file: trade_logs/2025-04-22_complete_trades.csv
+Complete trades CSV file does not exist yet, will create: trade_logs/2025-04-22_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-22_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.00012 BTC for 10.57 USDT @ 88080.95
+[🟢] Profit/Loss: 0.04%
+[⏱️] Trade execution completed in 3.835 seconds
+[06:48:04.211] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 4.207 seconds (before logging)
