@@ -1218,3 +1218,47 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 1.585 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 11:20:02 ---
+
+
+[11:20:00.006] ========================================
+[🕒] Processing 2025-04-22 11:20:00.007 UTC
+[📈] Last candle timestamp: 2025-04-22T11:18:00+00:00
+[⏱️] Fetched candles from 2025-04-22T11:18:00+00:00 to 2025-04-22T11:19:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candle(s) to buffer
+[💹] Current price: 88565.22
+[📊] Candle buffer: 204/204
+[🔍] Updating direction for 1 predictions using 10 candles
+[📊] Candle 11:10 → 11:11: 88562.07 → 88589.98 = UP
+[📊] Candle 11:11 → 11:12: 88589.98 → 88511.48 = DOWN
+[📊] Candle 11:12 → 11:13: 88511.48 → 88489.45 = DOWN
+[📊] Candle 11:13 → 11:14: 88489.45 → 88523.98 = UP
+[📊] Candle 11:14 → 11:15: 88523.98 → 88564.86 = UP
+[📊] Candle 11:15 → 11:16: 88564.86 → 88565.23 = UP
+[📊] Candle 11:16 → 11:17: 88565.23 → 88565.23 = DOWN
+[📊] Candle 11:17 → 11:18: 88565.23 → 88572.99 = UP
+[📊] Candle 11:18 → 11:19: 88572.99 → 88565.22 = DOWN
+[ℹ️] Fallback: Matched prediction from 11:19:00 to latest candle: DOWN
+
+[11:20:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5772)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.5772 > threshold
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 88565.23, 'entry_time': datetime.datetime(2025, 4, 22, 11, 19, 1, 155674, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88565.23 | P/L: -0.00% | Duration: 59 seconds
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.00% | Position duration: 59 seconds
+[11:20:01.514] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.508 seconds (before logging)
