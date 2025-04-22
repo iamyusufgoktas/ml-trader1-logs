@@ -622,3 +622,36 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.483 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 09:56:01 ---
+
+
+[09:56:00.004] ========================================
+[🕒] Processing 2025-04-22 09:56:00.004 UTC
+[🔍] Last candle in Redis: time=2025-04-22 09:55:00, close=88513.99
+[🔍] Requesting candles from Binance starting at timestamp 1745315700000
+[🔍] Received 1 candles from Binance
+[🔍] Binance candle 0: time=2025-04-22 09:55:00, open=88513.99, close=88502.95
+[🔍] Filtered out 1 candles we already have
+[⚠️] No new candles to add!
+
+[09:56:00] [🧠] Processing trading signal
+[🔍] Generating features from 204 candles
+[🔍] Candle time range: 2025-04-22 06:32:00 to 2025-04-22 09:55:00
+ERROR: Error processing signal: Cannot subtract tz-naive and tz-aware datetime-like objects.
+Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1203, in process_signal
+    features, num_candles = self.generate_features()
+                            ~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1113, in generate_features
+    time_diff = (now - last_ts).total_seconds() / 60
+                 ~~~~^~~~~~~~~
+  File "timestamps.pyx", line 546, in pandas._libs.tslibs.timestamps._Timestamp.__rsub__
+  File "timestamps.pyx", line 514, in pandas._libs.tslibs.timestamps._Timestamp.__sub__
+TypeError: Cannot subtract tz-naive and tz-aware datetime-like objects.
+
+[09:56:00.814] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 0.810 seconds (before logging)
