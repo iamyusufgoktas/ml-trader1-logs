@@ -11730,3 +11730,41 @@ TypeError: float() argument must be a string or a real number, not 'NoneType'
 ========================================
 
 [🕒] Processing completed in 5.261 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 19:46:02 ---
+
+
+[19:46:00.021] ========================================
+[🕒] Processing 2025-04-22 19:46:00.021 UTC
+[📈] Last candle timestamp: 2025-04-22T19:45:00+00:00
+[⏱️] Fetched candles from 2025-04-22T19:45:00+00:00 to 2025-04-22T19:46:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 91254.74
+[📊] Candle buffer: 204/204
+[📊] Latest candle 19:45 → 19:45: 91209.09 → 91254.73 = UP
+[✅] Updated prediction from 19:45:02 with direction: UP
+[📊] Candle buffer: 204/204
+
+[19:46:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4272)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.4272 < threshold
+[⏱️] Signal generated at: 19:46:00.482
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: NEUTRAL
+[🟡] No position change needed (signal: NEUTRAL, position: False)
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[19:46:01.814] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.793 seconds (before logging)
