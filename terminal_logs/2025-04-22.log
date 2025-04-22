@@ -948,3 +948,63 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 1.934 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 10:10:02 ---
+
+
+[10:10:00.001] ========================================
+[🕒] Processing 2025-04-22 10:10:00.001 UTC
+[🔍] Last candle in Redis: time=2025-04-22 10:09:00+00:00, close=88553.76
+[🔍] Requesting candles from Binance starting at timestamp 1745316540000
+[🔍] Received 2 candles from Binance
+[🔍] Binance candle 0: time=2025-04-22 10:09:00+00:00, open=88553.76, close=88553.75
+[🔍] Binance candle 1: time=2025-04-22 10:10:00+00:00, open=88553.75, close=88553.75
+[🔍] Filtered out 1 candles we already have
+[📊] Adding 1 new candle(s) to buffer
+[💹] Current price: 88553.75
+[🔍] Storing 1 new candles in Redis
+[📊] Candle buffer: 204/204
+[🔍] Direction check: prev=88553.76, curr=88553.75, actual=DOWN
+[🔍] Updating directions with 10 candles
+[🔍] Found 1 predictions needing direction updates
+[🔍] Prediction 1 needing update: 2025-04-22T10:09:00.922151+00:00
+[🔍] Using candles: prev=2025-04-22T10:09:00+00:00, current=2025-04-22T10:10:00+00:00
+[🔍] Direction comparison: prev_close=88553.76, current_close=88553.75
+[🔍] Determined actual direction: DOWN
+[✅] Updated prediction from 2025-04-22T10:09:00.922151+00:00 with direction: DOWN
+[📊] Total predictions updated with direction 'DOWN': 1
+[🧠] Updated prediction tracker with actual price direction
+
+[10:10:00] [🧠] Processing trading signal
+[🔍] Generating features from 204 candles
+[🔍] Candle time range: 2025-04-22 06:47:00 to 2025-04-22 10:10:00+00:00
+[🔍] Last candle age: 0.0 minutes
+[⚠️] Error converting timestamps: unconverted data remains when parsing with format "%Y-%m-%dT%H:%M:%S": "+00:00", at position 201. You might want to try:
+    - passing `format` if your strings have a consistent format;
+    - passing `format='ISO8601'` if your strings are all ISO8601 but not necessarily in exactly the same format;
+    - passing `format='mixed'`, and the format will be inferred for each element individually. You might want to use `dayfirst` alongside this.
+[🔍] Calling feature generation function
+Calculating features for ML model...
+Creating specific ML features...
+[🔍] Generated features with shape: (204, 36)
+[🧠] Using 204 candles to generate features; feeding last 4 rows to model
+[🔍] Feature hash: 7490971128501199979 (should change each cycle)
+[🔍] First few feature values from first row: [0. 0. 0.]
+[🔍] Last few feature values from last row: [0. 0. 0.]
+[🔍] Model input hash: 6908694350857095968 (should change each cycle)
+[📈] Direction Model: UP   (confidence: 0.7644)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7644 > threshold
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 88555.79, 'entry_time': datetime.datetime(2025, 4, 22, 10, 6, 4, 922093, tzinfo=datetime.timezone.utc), 'position_size': 0.00012}
+[📊] Current position: 0.00012 BTC @ 88555.79 | P/L: -0.00% | Duration: 3 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.00% | Position duration: 3 minutes
+[10:10:01.494] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.494 seconds (before logging)
