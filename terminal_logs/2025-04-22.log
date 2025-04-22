@@ -13409,3 +13409,46 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.728 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 20:47:03 ---
+
+
+[20:47:00.004] ========================================
+[🕒] Processing 2025-04-22 20:47:00.004 UTC
+[📈] Last candle timestamp: 2025-04-22T20:45:00+00:00
+[⏱️] Fetched candles from 2025-04-22T20:45:00+00:00 to 2025-04-22T20:46:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91199.89
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 20:45, 20:46
+[🔍] Candle T=20:45: Open=91199.90, High=91199.90, Low=91143.32, Close=91150.00
+[🔍] Candle T+1=20:46: Open=91150.01, High=91199.90, Low=91150.00, Close=91199.89
+[📉] T+1 Open < T Open: 91150.01 < 91199.90 (-0.0547%) = DOWN
+[✅] Updated prediction from 20:45:00 with direction: DOWN
+[ℹ️] Cannot evaluate prediction from 20:46:00: missing candles T+T=20:47
+
+[20:47:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7307)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7307 > threshold
+[⏱️] Signal generated at: 20:47:00.460
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 91333.34, 'entry_time': datetime.datetime(2025, 4, 22, 19, 54, 1, 141848, tzinfo=datetime.timezone.utc), 'position_size': 0.00010801, 'direction_prob': 0.6711361408233643}
+[📊] Current position: 0.00010801 BTC @ 91333.34 | P/L: -0.15% | Duration: 52 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.15% | Position duration: 52 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[20:47:02.917] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.914 seconds (before logging)
