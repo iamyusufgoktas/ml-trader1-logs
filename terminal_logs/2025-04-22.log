@@ -9769,3 +9769,98 @@ ERROR: Sell order failed: APIError(code=-1013): Filter failure: LOT_SIZE
 ========================================
 
 [🕒] Processing completed in 4.253 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 18:07:05 ---
+
+
+[18:07:00.004] ========================================
+[🕒] Processing 2025-04-22 18:07:00.005 UTC
+[📈] Last candle timestamp: 2025-04-22T18:06:00+00:00
+[⏱️] Fetched candles from 2025-04-22T18:06:00+00:00 to 2025-04-22T18:06:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 91513.62
+[📊] Candle buffer: 204/204
+[📊] Latest candle 18:06 → 18:06: 91498.74 → 91513.62 = UP
+[✅] Updated prediction from 18:06:07 with direction: UP
+
+[18:07:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7538)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.9900
+    • Current confidence: 0.7538 < threshold
+[⏱️] Signal generated at: 18:07:00.449
+[🚦] Trade Signal: NEUTRAL
+[🚦] Trade Signal: NEUTRAL
+
+[💼] Evaluating position - Current: {'entry_price': 91396.14, 'entry_time': datetime.datetime(2025, 4, 22, 18, 0, 1, 114223, tzinfo=datetime.timezone.utc), 'position_size': 0.00011955}
+[📊] Current position: 0.00011955 BTC @ 91396.14 | P/L: 0.13% | Duration: 6 minutes
+[🚦] Processing signal: NEUTRAL
+[🔴] Exiting position based on signal: NEUTRAL...
+[📊] Exiting: 0.00011955 BTC @ estimated 91513.62 | Est. P/L: 0.13%
+[📡] Sending SELL order for 0.00011955 BTC @ market price
+[❌] Order execution failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[🔄] Attempting direct market sell instead...
+[💰] Actual BTC balance: 0.00011955
+[📤] Selling all available BTC: 0.00012
+[❌] Direct market sell failed: APIError(code=-2010): Account has insufficient balance for requested action.
+[🔍] Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1720, in _exit_trade
+    order = self.binance.create_order(
+        symbol=self.config.BINANCE_SYMBOL,
+    ...<2 lines>...
+        quantity=position_size
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 1382, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 185, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 117, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: LOT_SIZE
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 2910, in _direct_market_sell
+    order = self.binance.create_order(
+        symbol=self.config.BINANCE_SYMBOL,
+    ...<2 lines>...
+        quantity=sell_amount
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 1382, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 185, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 117, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2010): Account has insufficient balance for requested action.
+
+ERROR: Sell order failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[⚠️] Position is maintained in bot memory. You can try to exit again later.
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[18:07:05.013] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 5.009 seconds (before logging)
