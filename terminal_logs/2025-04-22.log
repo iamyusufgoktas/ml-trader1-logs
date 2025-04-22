@@ -8785,3 +8785,98 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.817 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 17:26:06 ---
+
+
+[17:26:00.007] ========================================
+[🕒] Processing 2025-04-22 17:26:00.007 UTC
+[📈] Last candle timestamp: 2025-04-22T17:24:00+00:00
+[⏱️] Fetched candles from 2025-04-22T17:24:00+00:00 to 2025-04-22T17:26:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 90798.73
+[📊] Candle buffer: 204/204
+[📊] Latest candle 17:24 → 17:25: 90772.68 → 90798.73 = UP
+[✅] Updated prediction from 17:25:00 with direction: UP
+[📊] Candle buffer: 204/204
+
+[17:26:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.3151)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.3151 < threshold
+[⏱️] Signal generated at: 17:26:00.483
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 90700.0, 'entry_time': datetime.datetime(2025, 4, 22, 16, 55, 1, 123550, tzinfo=datetime.timezone.utc), 'position_size': 0.00011966}
+[📊] Current position: 0.00011966 BTC @ 90700.00 | P/L: 0.14% | Duration: 30 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.00011966 BTC @ estimated 90823.47 | Est. P/L: 0.14%
+[📡] Sending SELL order for 0.00011966 BTC @ market price
+[❌] Order execution failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[🔄] Attempting to fix lot size issue and retry...
+[🔧] Adjusted quantity from 0.00011966 to 0.0
+[❌] Retry also failed: APIError(code=-1013): Invalid quantity.
+[🔍] Error details: Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1720, in _exit_trade
+    order = self.binance.create_order(
+        symbol=self.config.BINANCE_SYMBOL,
+    ...<2 lines>...
+        quantity=position_size
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 1382, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 185, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 117, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Filter failure: LOT_SIZE
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader2/crypto_trading_bot.py", line 1814, in _exit_trade
+    retry_order = self.binance.create_order(
+        symbol=self.config.BINANCE_SYMBOL,
+    ...<2 lines>...
+        quantity=adjusted_qty
+    )
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 1382, in create_order
+    return self._post("order", True, data=params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 185, in _post
+    return self._request_api("post", path, signed, version, **kwargs)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 117, in _request_api
+    return self._request(method, uri, signed, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 89, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/yusufgoktas/Desktop/Trading/ml-trader/.venv/lib/python3.13/site-packages/binance/client.py", line 98, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-1013): Invalid quantity.
+
+ERROR: Sell order failed: APIError(code=-1013): Filter failure: LOT_SIZE
+[⚠️] Position is maintained in bot memory. You can try to exit again later.
+[💾] Saving prediction data to prediction_logs/2025-04-22_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[17:26:05.124] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 5.117 seconds (before logging)
