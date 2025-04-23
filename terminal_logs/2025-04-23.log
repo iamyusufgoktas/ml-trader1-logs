@@ -3735,3 +3735,54 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 5.444 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 21:30:02 ---
+
+
+[21:30:00.020] ========================================
+[🕒] Processing 2025-04-23 21:30:00.020 UTC
+[📈] Last candle timestamp: 2025-04-23T21:00:00+00:00
+[⏱️] Fetched candles from 2025-04-23T21:00:00+00:00 to 2025-04-23T21:15:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 93735.33
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 21:00
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[ℹ️] Cannot evaluate prediction from 21:15:00: missing candle T=21:15
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 21:00, 21:15
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=21:15: Open=93855.35, High=93877.77, Low=93724.55, Close=93735.33
+[📉] T Close < T Open: 93735.33 < 93855.35 (-0.1279%) = DOWN
+[✅] Updated prediction from 21:15:00 with direction: DOWN
+
+[21:30:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.6213)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.6213 > threshold
+[⏱️] Signal generated at: 21:30:00.615
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: BUY
+[🟢] Entering long position...
+[💰] Available USDT balance: 10.15
+[📡] Sending BUY order for 10.05 USDT @ market price
+[💾] Saved current trade state to Redis
+[📝] Logging trade: ENTRY at 93741.38
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💰] Successfully bought 0.0001 BTC for 10.05 USDT @ 93741.38
+[💾] Saving prediction data to prediction_logs/2025-04-23_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[21:30:02.362] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.342 seconds (before logging)
