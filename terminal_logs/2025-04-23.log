@@ -824,3 +824,43 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 5.178 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 05:00:02 ---
+
+
+[05:00:00.090] ========================================
+[🕒] Processing 2025-04-23 05:00:00.090 UTC
+[📈] Last candle timestamp: 2025-04-23T04:30:00+00:00
+[⏱️] Fetched candles from 2025-04-23T04:30:00+00:00 to 2025-04-23T04:45:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 93665.99
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 04:30, 04:45
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=04:45: Open=93164.58, High=93666.00, Low=93158.01, Close=93665.99
+[📈] T Close > T Open: 93665.99 > 93164.58 (+0.5382%) = UP
+[✅] Updated prediction from 04:45:00 with direction: UP
+
+[05:00:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4497)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4497 < threshold
+[⏱️] Signal generated at: 05:00:00.667
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: SELL
+[🟡] No position change needed (signal: SELL, position: False)
+[💾] Saving prediction data to prediction_logs/2025-04-23_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[05:00:01.518] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 1.428 seconds (before logging)
