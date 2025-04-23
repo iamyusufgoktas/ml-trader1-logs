@@ -2181,3 +2181,49 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.878 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 12:45:03 ---
+
+
+[12:45:00.101] ========================================
+[🕒] Processing 2025-04-23 12:45:00.101 UTC
+[📈] Last candle timestamp: 2025-04-23T12:15:00+00:00
+[⏱️] Fetched candles from 2025-04-23T12:15:00+00:00 to 2025-04-23T12:30:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 93625.65
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 12:15
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[ℹ️] Cannot evaluate prediction from 12:30:00: missing candle T=12:30
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 12:15, 12:30
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=12:30: Open=93721.08, High=93857.14, Low=93608.69, Close=93625.65
+[📉] T Close < T Open: 93625.65 < 93721.08 (-0.1018%) = DOWN
+[✅] Updated prediction from 12:30:00 with direction: DOWN
+
+[12:45:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7079)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7079 > threshold
+[⏱️] Signal generated at: 12:45:00.735
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 93633.55, 'entry_time': datetime.datetime(2025, 4, 23, 11, 15, 1, 230680, tzinfo=datetime.timezone.utc), 'position_size': 0.0001, 'direction_prob': 0.721854031085968}
+[📊] Current position: 0.0001 BTC @ 93633.55 | P/L: -0.00% | Duration: 1 hours 29 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: -0.00% | Position duration: 1 hours 30 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-23_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[12:45:02.538] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.438 seconds (before logging)
