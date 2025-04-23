@@ -1917,3 +1917,57 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 6.707 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 11:15:02 ---
+
+
+[11:15:00.090] ========================================
+[🕒] Processing 2025-04-23 11:15:00.090 UTC
+[📈] Last candle timestamp: 2025-04-23T10:45:00+00:00
+[⏱️] Fetched candles from 2025-04-23T10:45:00+00:00 to 2025-04-23T11:15:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 3 new candles to buffer
+[💹] Current price: 93633.54
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 10:45
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[ℹ️] Cannot evaluate prediction from 11:00:00: missing candle T=11:00
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 10:45, 11:00
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=11:00: Open=93745.04, High=93764.76, Low=93610.34, Close=93633.54
+[📉] T Close < T Open: 93633.54 < 93745.04 (-0.1189%) = DOWN
+[✅] Updated prediction from 11:00:00 with direction: DOWN
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 11:00, 11:15
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+
+[11:15:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.7219)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.7219 > threshold
+[⏱️] Signal generated at: 11:15:00.718
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: None
+[🚦] Processing signal: BUY
+[🟢] Entering long position...
+[💰] Available USDT balance: 10.15
+[📡] Sending BUY order for 10.05 USDT @ market price
+[💾] Saved current trade state to Redis
+[📝] Logging trade: ENTRY at 93633.55
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💰] Successfully bought 0.0001 BTC for 10.05 USDT @ 93633.55
+[💾] Saving prediction data to prediction_logs/2025-04-23_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[11:15:02.451] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.361 seconds (before logging)
