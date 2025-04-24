@@ -1734,3 +1734,48 @@ Creating specific ML features...
 ========================================
 
 [🕒] Processing completed in 2.273 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 10:00:03 ---
+
+
+[10:00:00.090] ========================================
+[🕒] Processing 2025-04-24 10:00:00.090 UTC
+[📈] Last candle timestamp: 2025-04-24T09:30:00+00:00
+[⏱️] Fetched candles from 2025-04-24T09:30:00+00:00 to 2025-04-24T10:00:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 2 new candles to buffer
+[💹] Current price: 92476.9
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 09:30, 09:45
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=09:45: Open=92347.82, High=92488.00, Low=92249.02, Close=92476.90
+[📈] T Close > T Open: 92476.90 > 92347.82 (+0.1398%) = UP
+[✅] Updated prediction from 09:45:00 with direction: UP
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 09:45, 10:00
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+
+[10:00:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: UP   (confidence: 0.5121)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.5121 > threshold
+[⏱️] Signal generated at: 10:00:00.692
+[🚦] Trade Signal: BUY
+[🚦] Trade Signal: BUY
+
+[💼] Evaluating position - Current: {'entry_price': 92380.31, 'entry_time': datetime.datetime(2025, 4, 24, 7, 30, 1, 239602, tzinfo=datetime.timezone.utc), 'position_size': 0.0001, 'direction_prob': 0.9116708636283875}
+[📊] Current position: 0.0001 BTC @ 92380.31 | P/L: 0.10% | Duration: 2 hours 29 minutes
+[🚦] Processing signal: BUY
+[🔵] HOLD - Already in position and received BUY signal
+[📊] Current P/L: 0.10% | Position duration: 2 hours 30 minutes
+[💾] Saving prediction data to prediction_logs/2025-04-24_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[10:00:02.529] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 2.440 seconds (before logging)
