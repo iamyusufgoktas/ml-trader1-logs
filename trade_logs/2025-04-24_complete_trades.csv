@@ -1,0 +1,2 @@
+trade_id,entry_time,exit_time,entry_price,exit_price,quantity,profit_pct,profit_usdt,direction_prob,exit_signal_prob,trade_result,trade_duration
+"41870414918","2025-04-23 21:30:01","2025-04-24 07:15:02","93741.38","92623.99","0.00010000","-1.1920","-0.1117","0.6213","0.4650","Loss","9 hours 45 minutes"
