@@ -3129,3 +3129,55 @@ Sending trade notification to Slack
 ========================================
 
 [🕒] Processing completed in 2.228 seconds (before logging)
+
+
+--- LOG CONTINUATION AT 18:00:07 ---
+
+
+[18:00:00.100] ========================================
+[🕒] Processing 2025-04-24 18:00:00.100 UTC
+[📈] Last candle timestamp: 2025-04-24T17:30:00+00:00
+[⏱️] Fetched candles from 2025-04-24T17:30:00+00:00 to 2025-04-24T17:45:00+00:00
+[🔄] Filtered out 1 duplicate candles
+[📊] Adding 1 new candles to buffer
+[💹] Current price: 93011.28
+[📊] Candle buffer: 204/204
+[🕒] Available candle minutes: 17:30, 17:45
+[ℹ️] Cannot evaluate prediction from 00:01:57: missing candle T=00:01
+[🔍] Candle T=17:45: Open=92764.88, High=93019.55, Low=92666.62, Close=93011.28
+[📈] T Close > T Open: 93011.28 > 92764.88 (+0.2656%) = UP
+[✅] Updated prediction from 17:45:00 with direction: UP
+
+[18:00:00] [🧠] Processing trading signal
+[✅] Successfully converted and sorted 204 timestamps to UTC format
+Calculating features for ML model...
+Creating specific ML features...
+[📈] Direction Model: DOWN (confidence: 0.4339)
+[🔍] Signal Analysis:
+    • Direction threshold: 0.5000
+    • Current confidence: 0.4339 < threshold
+[⏱️] Signal generated at: 18:00:00.701
+[🚦] Trade Signal: SELL
+[🚦] Trade Signal: SELL
+
+[💼] Evaluating position - Current: {'entry_price': 92764.89, 'entry_time': datetime.datetime(2025, 4, 24, 17, 45, 1, 134917, tzinfo=datetime.timezone.utc), 'position_size': 0.0001, 'direction_prob': 0.8181591629981995}
+[📊] Current position: 0.0001 BTC @ 92764.89 | P/L: 0.25% | Duration: 14 minutes
+[🚦] Processing signal: SELL
+[🔴] Exiting position based on signal: SELL...
+[📊] Exiting: 0.0001 BTC @ estimated 93000.01 | Est. P/L: 0.25%
+[📡] Selling entire BTC balance: 0.0001 BTC @ market price
+[📝] Logging trade: EXIT at 93000.0
+Saving complete trade data to CSV file: trade_logs/2025-04-24_complete_trades.csv
+Successfully saved complete trade to trade_logs/2025-04-24_complete_trades.csv
+Sending trade notification to Slack
+[✅] Trade logged to GitHub
+[💸] Successfully sold 0.0001 BTC for 9.30 USDT @ 93000.00
+[🟢] Profit/Loss: 0.25%
+[💾] Marked trade as completed in Redis
+[✅] Removed trade 41913917321 from pending trades
+[💾] Saving prediction data to prediction_logs/2025-04-24_predictions.csv
+[📊] Updated prediction log with 1 new entries
+[18:00:06.724] [✅] Cycle complete
+========================================
+
+[🕒] Processing completed in 6.624 seconds (before logging)
